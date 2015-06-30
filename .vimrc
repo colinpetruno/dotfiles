@@ -62,7 +62,7 @@ set gdefault
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 " Change mapleader
-let mapleader=","
+let mapleader = "\<Space>"
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
@@ -84,13 +84,18 @@ set exrc
 set secure
 " Enable line numbers
 set number
-" Enable Colun Width Indicator
-set colorcolumn=80
-hi ColorColumn ctermbg=23
+
 " Enable syntax highlighting
 syntax on
 " Highlight current line
 set cursorline
+hi CursorLine ctermbg=23
+" Number highlighting bg
+" hi LineNr ctermbg=23
+" Enable Colun Width Indicator
+set colorcolumn=80
+hi ColorColumn ctermbg=23
+
 " Make tabs as wide as two spaces
 set tabstop=2
 set expandtab
@@ -154,6 +159,11 @@ nnoremap <Leader>w :w<CR>
 " NerdTree Shortcut
 map <C-n> :NERDTreeToggle<CR>
 
+" Toolbar colors
+:let g:airline_theme='sol'
+:let g:airline#extensions#tabline#enabled = 1
+:let g:airline#extensions#tabline#fnamemod = ':t'
+
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
 	let save_cursor = getpos(".")
@@ -174,4 +184,5 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+  autocmd BufWritePre *.scss,*.py,*.js,*.rb,*.erb :call <SID>StripWhitespace()
 endif
