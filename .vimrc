@@ -84,12 +84,18 @@ set exrc
 set secure
 " Enable line numbers
 set number
+" Enable Colun Width Indicator
+set colorcolumn=80
+hi ColorColumn ctermbg=23
 " Enable syntax highlighting
 syntax on
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -124,6 +130,29 @@ if exists("&relativenumber")
 endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
+
+" INDENT GUIDE COLORS
+hi IndentGuidesOdd  ctermbg=Blue
+hi IndentGuidesEven ctermbg=DarkCyan
+
+" easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" easier tab navigation
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+"
+" leader o to open file
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+
+" NerdTree Shortcut
+map <C-n> :NERDTreeToggle<CR>
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
