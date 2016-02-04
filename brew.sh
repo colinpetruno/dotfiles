@@ -102,5 +102,16 @@ brew install tree
 brew install webkit2png
 brew install zopfli
 
+brew install Caskroom/cask/iterm2 
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install chefdk
+brew cask install sequel-pro
+brew cask install sourcetree
+brew cask install slack
+brew cask install google-chrome
+brew cask install firefox
+brew cask install divvy
+
 # Remove outdated versions from the cellar.
 brew cleanup
