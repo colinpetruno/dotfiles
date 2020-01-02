@@ -35,12 +35,6 @@ brew install bash-completion2
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
-
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
@@ -49,14 +43,17 @@ brew install homebrew/dupes/screen
 brew install homebrew/php/php55 --with-gmp
 
 # Install font tools.
+# Convert fonts from ttf / otf to woff
+
 brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
-brew install bfg
+
+brew install aircrack-ng        # wifi security and cracking auditing https://www.aircrack-ng.org/movies.html
+brew install bfg 		# remove large files and passwords from git history
 brew install binutils
 brew install binwalk
 brew install cifer
@@ -65,7 +62,7 @@ brew install dns2tcp
 brew install fcrackzip
 brew install foremost
 brew install hashpump
-brew install hydra
+brew install hydra		# network hacker tools
 brew install john
 brew install knock
 brew install netpbm
@@ -77,30 +74,26 @@ brew install tcpflow
 brew install tcpreplay
 brew install tcptrace
 brew install ucspi-tcp # `tcpserver` etc.
-brew install xpdf
-brew install xz
+brew install xpdf				# pdf text viewer and toolkit 
+brew install xz					# data compression
 
 # Install other useful binaries.
-brew install ack
-brew install dark-mode
-#brew install exiv2
+brew install ack     				# searching
 brew install git
-brew install git-lfs
-brew install imagemagick --with-webp
-brew install lua
-brew install lynx
+brew install git-lfs				# git large file system and storage
+brew install imagemagick --with-webp		# image editing and processing
+brew install lua				# scripting language 
+brew install lynx				# text based web browser
 brew install p7zip
-brew install pigz
-brew install pv
-brew install reattach-to-user-namespace
-brew install rename
-brew install rhino
+brew install pigz				# parallel gzip
+brew install pv					# pipeviewer, monitor data through a pipeline
+brew install reattach-to-user-namespace		# tmux pasteboard, enables pbpaste and pbcopy from tmux
+brew install rename				# assist renaming 
 brew install speedtest_cli
-brew install ssh-copy-id
 brew install tmux
-brew install tree
-brew install webkit2png
-brew install zopfli
+brew install tree				# nice formatting of the ls command for a directory
+brew install webkit2png				# screenshots of webpage to png
+brew install zopfli				# c based compression
 
 brew install Caskroom/cask/iterm2 
 brew cask install virtualbox
@@ -111,7 +104,7 @@ brew cask install sourcetree
 brew cask install slack
 brew cask install google-chrome
 brew cask install firefox
-brew cask install divvy
+brew cask install postico
 
 # Remove outdated versions from the cellar.
 brew cleanup
