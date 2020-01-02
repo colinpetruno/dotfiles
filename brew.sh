@@ -95,6 +95,9 @@ brew install tree				# nice formatting of the ls command for a directory
 brew install webkit2png				# screenshots of webpage to png
 brew install zopfli				# c based compression
 
+# Ruby stuff
+brew install rbenv
+
 brew install Caskroom/cask/iterm2 
 brew cask install virtualbox
 brew cask install vagrant
