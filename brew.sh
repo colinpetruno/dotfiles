@@ -97,6 +97,9 @@ brew install zopfli				# c based compression
 
 # Ruby stuff
 brew install rbenv
+brew install postgresql
+brew services start postgresql
+brew install yarn
 
 brew install Caskroom/cask/iterm2 
 brew cask install virtualbox
