@@ -109,8 +109,10 @@ brew cask install sequel-pro
 brew cask install sourcetree
 brew cask install slack
 brew cask install google-chrome
+brew cask install chromedriver
 brew cask install firefox
 brew cask install postico
+brew cask install balsamiq-mockups
 
 # Remove outdated versions from the cellar.
 brew cleanup

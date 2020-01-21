@@ -89,8 +89,8 @@ set number
 " Enable syntax highlighting
 syntax on
 " Highlight current line
-set cursorline
-hi CursorLine ctermbg=23
+" set cursorline
+" hi CursorLine ctermbg=23
 " Number highlighting bg
 " hi LineNr ctermbg=23
 " Enable Colun Width Indicator
