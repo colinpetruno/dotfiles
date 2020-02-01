@@ -113,6 +113,7 @@ brew cask install chromedriver
 brew cask install firefox
 brew cask install postico
 brew cask install balsamiq-mockups
+brew cask install macdown
 
 # Remove outdated versions from the cellar.
 brew cleanup
