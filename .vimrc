@@ -199,7 +199,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Custom Ignore for Ctrl, add sprockets and cache files
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|sprockets)$',
+  \ 'dir':  '\v[\/]\.(git|node_modules|hg|svn|sprockets)$',
   \ 'file': '\v\.(exe|so|dll|cache)$'
   \ }
 " Strip trailing whitespace (,ss)
